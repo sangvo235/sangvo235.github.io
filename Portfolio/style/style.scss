@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Mixin allows for the reuse of CSS code throughout the website
+@mixin align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family:'Poppins', sans-serif; 
+    font-size: 4em;
+    color: white;
+
+.parallax_wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    // perspective refers to z-axis 
+    perspective: 300px;
+
+        .intro_screen {
+            height: 100vh;
+            background-color: forestgreen;
+            @include align-center;
+        }
+
+        .outro_screen {
+            height: 100vh;
+            background-color: crimson;
+            @include align-center;
+        }
+
+    .parallax_group {
+        position: relative;
+        height: 100vh;
+        // preserve-3d allows the perservation of the 3D imaging across the browser creating the depth/perspective required for the effect
+        transform-style: preserve-3d;
+
+        .parallax_layer {
+            position: absolute;
+            inset: 0;
+            @include align-center;
+        }
+
+        .base_layer {
+            // scale calculation: 1 + ((Z transform value * -1) / perspective)
+            transform: translateZ(-300px) scale(2.1);
+        }
+
+        .mid_layer {
+            transform: translateZ(0);
+        }
+
+        .top_layer {
+            transform: translateZ(200px) scale(0.4);
+        }
+    }
+
+    
+
+        #intro {
+            z-index: 0;
+        }
+
+        #group-1 {
+            z-index: -1;
+        }
+
+        #group-1 > .base_layer {
+            background-color: palevioletred;
+        }
+
+        #group-2 {
+            z-index: -1;
+        }
+
+        #group-2 > .mid_layer {
+            background-color: palegoldenrod;
+        }
+
+        #outro {
+            z-index: 0;
+        }
+
+    }
+}
