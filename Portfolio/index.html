@@ -4,50 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css" type="text/css">
     <title>Sang Vo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/84be7e67ba.js" crossorigin="anonymous"></script>
 </head>
-<body> 
-    <div class="parallax_wrapper" id="intro"> 
-        <div class="parallax_group intro_screen">
-            <div class="words">
-                <p>Hello there, I'm Sang.</p> 
-                <span>I am a Master's Degree Student</span>
-                <span>I like eating food</span>
-                <span>I'm a fragrance collector</span>
-                <span>No pinapple on my pizza!</span>
-                <span>I'm probably sleeping at this time</span>
-                <span>There is always room for dessert</span>
-                <span>I like bubble tea</span>
+<body>
+
+    <section>
+        <nav>
+            <h1>SANG VO</h1>
+            <button type="button">Home</button>
+            <button type="button">About Me</button>
+            <button type="button">Projects</button>
+            <button type="button">Experience</button>
+            <button type="button">Contact Me</button>
+        </nav>
+
+        <div class="container">
+        <h2 class="main-title">
+            <p>Hello, I'm Sang.</p>
+            <div class="words"> 
+                I'm a
+                <span>&nbsp;Master's of IT student</span>
+                <span>&nbsp;Service Desk Analyst</span>
+                <span>&nbsp;foodie</span>
+                <span>&nbsp;fragrance collector</span>
+                <span>lways keen for coffee</span>
+                <span>&nbsp;content creator</span>
+                <span>&nbsp;bubble tea enthusiast</span>
             </div>
+        
+            <p class="seemore">See What I've Created<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fas fa-chevron-down"></i></p>
+
+        </h2>
+            <img src="./bg_base.png" class="bg_base" alt="" />
+            <img src="./bg_mid.png" class="bg_mid" alt="" />
+            <img src="./bg_top.png" class="bg_top" alt="" />
         </div>
 
-        <div class="parallax_group" id="group-1">
-            <div class="parallax_layer base_layer">
-                <img src="images/building.png" alt="image">
-            </div>
-            <div class="parallax_layer mid_layer">
-                <img src="images/finalb1.png" alt="image">
-            </div>
-            <div class="parallax_layer top_layer">
-                <img src="images/finalb2.png" alt="image">
-            </div>
+        <div class="content">
+            <div class ="content-images"></div>
+            <img src="./switzright.png" alt=""/>
+            <h3>Heya</h3>
         </div>
+    </section>
 
-        <div class="parallax_group" id="group-2">
-            <div class="parallax_layer mid_layer">
-                Mid Layer Page
-            </div>
-            <div class="parallax_layer top_layer">
-                Top Layer Page
-            </div>
-        </div>
-
-        <div class="parallax_group outro_screen" id="outro">
-            Period   
-        </div>
-
-    </div>    
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="./script.js"></script>    
+    
 </body>
 </html>
