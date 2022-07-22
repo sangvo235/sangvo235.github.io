@@ -27,14 +27,12 @@ body .parallax_wrapper .intro_screen {
 
 body .parallax_wrapper .intro_screen .words {
     position: absolute;
-    top: 45%;
-    left: 30%;
-    transform: translateY(-45%);
+    top: 40%;
+    transform: translateY(-40%);
 }
 
 body .parallax_wrapper .intro_screen .words span{
     position: absolute;
-    top: 0;
     white-space: nowrap;
     color: blueviolet;
     animation: animate 17s linear infinite;
@@ -127,7 +125,7 @@ body .parallax_wrapper .parallax_group .mid_layer {
   transform: translateZ(0);
 }
 body .parallax_wrapper .parallax_group .top_layer {
-  transform: translateZ(200px) scale(0.4);
+  transform: translateZ(100px) scale(0.67);
 }
 body .parallax_wrapper #intro {
   z-index: 0;
