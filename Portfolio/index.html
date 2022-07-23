@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sang Vo</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="sv_favicon.ico"/>
     <link href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/84be7e67ba.js" crossorigin="anonymous"></script>
 </head>
-<body>
-
+<body>    
     <section>
-        <nav>
-            <h1>SANG VO</h1>
-            <button type="button">Home</button>
-            <button type="button">About Me</button>
-            <button type="button">Projects</button>
-            <button type="button">Experience</button>
-            <button type="button">Contact Me</button>
-        </nav>
+        <header>
+            <a href="#" class="logo">SANG VO</a>
+            <ul> 
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
+        </header>
 
         <div class="container">
         <h2 class="main-title">
@@ -39,7 +41,9 @@
             <i class="fas fa-chevron-down"></i></p>
 
         </h2>
+        <div id="snow">
             <img src="./bg_base.png" class="bg_base" alt="" />
+        </div>
             <img src="./bg_mid.png" class="bg_mid" alt="" />
             <img src="./bg_top.png" class="bg_top" alt="" />
         </div>
@@ -49,7 +53,15 @@
             <img src="./switzright.png" alt=""/>
             <h3>Heya</h3>
         </div>
+
     </section>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
@@ -60,5 +72,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
     <script src="./script.js"></script>    
     
+    <script type="text/javascript" src="particles.min.js"></script>
+    <script type="text/javascript" src="custom.js"></script>
 </body>
 </html>

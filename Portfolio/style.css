@@ -6,13 +6,63 @@
     font-family: "Poppins", sans-serif;
 }
 
-nav {
-    position: absolute;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     padding: 3rem 10rem;
     justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 10;
 }
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header.sticky {
+    padding: 20px 100px;
+    background: black;
+    opacity: 70%;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: rgb(248, 203, 126);
+}
+
 
 .seemore {
     position: fixed;
@@ -22,7 +72,7 @@ nav {
     letter-spacing: 0.3vmax;    
 }
 
-.container .words span{
+.container .words span {
     position: absolute;
     white-space: nowrap;
     color: rgb(248, 203, 126);
@@ -106,12 +156,13 @@ nav {
     top: 40%;
     left: 40%;
     font-size: 5rem;
-    transform: translate(-40%, -40%)
+    transform: translate(-40%, -40%);
+    text-shadow: 0 0 10px rgba(255, 255, 255, .15);
 }
 
 .content {
     width: 100%;
-    background: black;
+    background: beige;
     min-height: 100vh;
     z-index: 2;
     position: absolute;
@@ -122,4 +173,13 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 50vh;
+}
+
+#snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
