@@ -1,8 +1,18 @@
-// Sticky navbar logic
-window.addEventListener("scroll", function(){
-  var header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 0)
+// Responsive Hamburger Menu for Mobile Logic 
+const hamburger = document.querySelector(".hamburger");
+const navmenu = document.querySelector(".nav-menu");
+
+  // Logic: when clicking hamburger the transition to an X in addition to the navmenu opening up occurs
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navmenu.classList.toggle("active");
 })
+
+  // Logic: when clicking a nav-link the menu should close
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navmenu.classList.remove("active");
+  }))
 
 let controller = new ScrollMagic.Controller();
 // Chain multiple animations together
@@ -12,9 +22,7 @@ timeline
   .to(".bg_top", 6, { y: -400 })
   .to(".bg_mid", 6, { y: -200 }, "-=6")
   .fromTo(".bg_base", { y: -25 }, { y: 0, duration: 6 }, "-=6")
-  .to(".about", 6, { top: "0%" }, "-=6")
-//   .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
-//   .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
+  .to(".random", 6, { top: "0%" }, "-=6");
 
 let scene = new ScrollMagic.Scene({
   triggerElement: "section",
