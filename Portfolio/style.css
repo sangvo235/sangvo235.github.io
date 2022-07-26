@@ -69,7 +69,8 @@ a {
     background-color: white;
 }
 
-@media(max-width:768px) {
+    /* IPad Air has dimensions of 820 x 1180, dynamically turns into hamburger menu for widths under the dimensions of IPad Air */
+@media(max-width:1179px) {
     .hamburger {
         display: block;
     }
@@ -95,6 +96,7 @@ a {
         left: -100%;
         top: 70px;
         gap: 0;
+        padding-left: 5rem;
         flex-direction: column;
         background: black;
         width: 100%;
@@ -110,7 +112,6 @@ a {
         left: 0;
     }
 }
-
 
 .seemore {
     position: fixed;
