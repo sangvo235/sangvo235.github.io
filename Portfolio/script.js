@@ -22,7 +22,7 @@ timeline
   .to(".bg_top", 6, { y: -400 })
   .to(".bg_mid", 6, { y: -200 }, "-=6")
   .fromTo(".bg_base", { y: -25 }, { y: 0, duration: 6 }, "-=6")
-  .to(".random", 6, { top: "0%" }, "-=6");
+  .to(".projects", 6, { top: "0%" }, "-=6");
 
 let scene = new ScrollMagic.Scene({
   triggerElement: "section",
