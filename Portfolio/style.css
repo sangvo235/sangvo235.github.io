@@ -329,15 +329,6 @@ a {
     float: left;
 }
 
-.experience-bio {
-    margin-left: 1rem;
-}
-
-.experience-bio p {
-    color: black;
-    display: block;
-}
-
 .image-wrapper3 {
     float: left;
     margin-right: 30px;
@@ -347,6 +338,23 @@ a {
     height: 13rem;
     width: 200px;
     object-fit: cover;
+}
+
+.experience-bio p {
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.experience-bio h2 {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.experience-bio h3 {
+    color: rgb(240, 164, 24);
+    font-size: 1.3rem;
 }
 
 .about {
