@@ -280,6 +280,10 @@ a {
     object-fit: cover;
 }
 
+.project-tech {
+    margin: 0.3em;
+}
+
 .project-tech img {
     width: 50px;
     height: 50px;
@@ -299,6 +303,32 @@ a {
     display: relative;
     color:black;
 }
+
+.project-bio .icon-wrapper {
+    gap: 50px;
+    margin: 2.5rem 0 0 16rem;
+}
+
+.project-bio .icon-wrapper i {
+    font-size: 4rem;
+    color: black;
+}
+
+.project-bio .icon-wrapper h5 {
+    color: black;
+    padding-left: 8px;
+    padding-top: 4px;
+}
+
+.project-bio .icon-demo i {
+    color:rgb(53, 141, 241);
+    size: 2rem;
+}
+
+.project-bio .icon-demo h5 {
+    color:rgb(53, 141, 241);
+}
+
 
 .experience {
     width: 100%;
