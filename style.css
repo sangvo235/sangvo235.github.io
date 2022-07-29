@@ -1,0 +1,624 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background: black;
+    opacity: 70%;
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    padding-right: 5rem;
+}
+
+.nav-logo {
+    font-size: 2rem;
+}
+
+/* Hover Effect */
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: rgb(248, 203, 126);
+}
+
+/* Hamburger Nav */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+    /* IPad Air has dimensions of 820 x 1180, dynamically turns into hamburger menu for widths under the dimensions of IPad Air */
+@media(max-width:1179px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(12px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(4){
+        transform: translateY(-12px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        padding-left: 5rem;
+        flex-direction: column;
+        background: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    
+    .nav-item {
+        margin: 16px 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+.seemore {
+    position: fixed;
+    padding-top: 300px;
+    transform: translateY(-40%);
+    font-size: 1.25vmax;
+    letter-spacing: 0.3vmax;    
+}
+
+.container .words span {
+    position: absolute;
+    white-space: nowrap;
+    color: rgb(248, 203, 126);
+    animation: animate 17s linear infinite;
+    opacity: 0;
+}
+
+.container .words span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.container .words span:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.container .words span:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.container .words span:nth-child(5) {
+    animation-delay: 8s;
+}
+
+.container .words span:nth-child(6) {
+    animation-delay: 10s;
+}
+
+.container .words span:nth-child(7) {
+    animation-delay: 12s;
+}
+
+.container .words span:nth-child(8) {
+    animation-delay: 14s;
+}
+
+.container .words span:nth-child(9) {
+    animation-delay: 16s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    2% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    12% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+.container {
+    height:100vh;
+}
+
+.container img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main-title {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 5rem;
+    transform: translate(-40%, -40%);
+    text-shadow: 0 0 10px rgba(255, 255, 255, .15);
+}
+
+#snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.projects {
+    width: 100%;
+    background-color: #102044;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 2;
+}
+
+.projects h1 {
+    position: absolute;
+    top: 4.8rem;
+    font-size: 4rem;
+}
+
+.projects-1, .projects-2, .projects-3 {
+    float: left;
+    width: 30%;
+    text-align: justify;
+    margin: 1em 1em 1em 1em;
+}
+
+.project-box {
+    position: absolute;
+    top: 20%;
+    width: 30%;
+    min-height: 75%;
+    padding: 4rem 2rem 2rem 2rem;
+    display: flex;
+    background-color: white;
+    border: 10px solid #97ade6;
+    border-radius: 4px;
+    box-shadow: 0.1rem 0.2rem rgba(0,0,0,0.3);
+}
+
+.project-name {
+    position: absolute;
+    top: 15px;
+    display: block;
+}
+
+.project-name h2 {
+    color: black;
+}
+
+.image-wrapper2 {
+    width: 150rem;
+    height: 23rem;
+    display: block;
+    justify-content: center;    
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.image-wrapper2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-tech {
+    margin: 0.3em;
+    text-align: center;
+}
+
+.project-tech img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Resizing some images to fit through using pseudo selector */
+.projects-2 .project-tech img:nth-child(5), img:nth-child(6), img:nth-child(7) {
+    object-fit: scale-down;
+}
+
+.projects-3 .project-tech img:nth-child(3) {
+    object-fit: scale-down;
+}
+
+.project-bio p {
+    display: relative;
+    color:black;
+}
+
+.project-bio .icon-wrapper {
+    gap: 50px;
+    margin: 1.7rem 0 0 14rem;
+}
+
+.project-bio .icon-wrapper i {
+    font-size: 3rem;
+    color: black;
+}
+
+.project-bio .icon-wrapper h5 {
+    color: black;
+    padding-top: 4px;
+}
+
+.project-bio .icon-demo i {
+    color:rgb(53, 141, 241);
+    size: 2rem;
+}
+
+.project-bio .icon-demo h5 {
+    color:rgb(53, 141, 241);
+}
+
+/* Logic for changing colours when hovering over text/icon
+    Use !important to overide previous black/blue colour */
+.icon-wrapper i:hover, .icon-wrapper h5:hover {
+    color: rgb(248, 203, 126) !important;
+}
+
+.experience {
+    width: 100%;
+    background-color: #102044;
+    min-height: 100vh;
+}
+
+.experience h1 {
+    position: flex;
+    font-size: 4rem;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    text-align: center;
+}
+
+.experience-1, .experience-2, .experience-3 {
+    margin: 0 25% 0 25%;
+}
+
+.experience-card {
+    width: 100%;
+    height: 13rem;
+    background-color: white;
+    border: 2px solid #97ade6;
+    border-radius: 4px;
+    box-shadow: 3rem 3rem rgba(0,0,0,0.3);
+    outline: thick solid #97ade6;
+    float: left;
+}
+
+.image-wrapper3 {
+    float: left;
+    margin-right: 30px;
+}
+
+.image-wrapper3 img {
+    height: 13rem;
+    width: 200px;
+    object-fit: cover;
+}
+
+.experience-bio p {
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.experience-bio h2 {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.experience-bio h3 {
+    color: rgb(240, 164, 24);
+    font-size: 1.3rem;
+}
+
+.about {
+    width: 100%;
+    background-color: #102044;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about h1 {
+    position: flex;
+    font-size: 4rem;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    text-align: center;
+}
+
+.card {
+    width: 33rem;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 36% 0 36%;
+}
+
+.card-bio {
+    background-color: #97ade6;
+    padding: 2rem 2rem 6rem 2rem;
+    display: flex;
+    border-radius: .5rem .5rem 0 0; 
+    position: relative;
+    z-index: 100;
+}
+
+.card-info img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%; 
+    height:100%;
+    object-fit: cover;
+}
+
+.card-info {
+    text-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.3);
+}
+
+.card-contact {
+    background-color: #5e79c4;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 .5rem .5rem;
+    transform: translateY(-100%); 
+    transition: all 0.5s;
+}
+
+.change .card-contact {
+    transform: translateY(0);
+}
+
+.card-contact h5 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.3);
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+.change .card-contact h5 {
+    transform: scale(1);
+}
+
+.image-wrapper {
+    width: 36rem;
+    height: 10rem;
+    margin-right: 3rem;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card-btn {
+    position: absolute;
+    bottom: -2.5rem;
+    right: 10rem;
+    padding: 1rem 1.5rem 1rem 1.7rem;
+    background-color: #2b303a; 
+    color: #fff;
+    border-radius: 5rem;
+    border: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    box-shadow: 0.1rem 0.2rem rgba(0,0,0,0.3);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* Logic for changing colours when hovering over contact me button & "^"
+    Use !important to overide previous white colour */
+.card-btn span:hover, .card-btn i:hover  {
+    color: rgb(240, 164, 24) !important;
+}
+
+.change .card-btn {
+    width: 6rem;
+    right: -3rem;
+    bottom: -3rem;
+    border-radius: 50%;
+}
+
+.card-btn-info {
+    transition: all 0.5s 0.1s;
+}
+
+.card-btn i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.change .card-btn-info {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s; 
+}
+
+.card-btn i {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change .card-btn i {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.card-out {
+    background-color: #fff;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    opacity: 0; 
+    visibility: hidden;
+}
+
+.change .card-out {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.email {
+    transition: all .5s .3s;  
+}
+
+.github {
+    transition: all .5s .5s;  
+}
+
+.linkedin {
+    transition: all .5s .7s;  
+}
+
+.icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.6rem;
+}
+
+.email .icon-wrapper {
+    background-color: rgb(240, 164, 24);
+}
+
+.github .icon-wrapper {
+    background-color: rgb(30, 30, 31);
+}
+
+.linkedin .icon-wrapper {
+    background-color: rgb(53, 141, 241);
+}
+
+.icon-wrapper i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.email h5 {
+    color: rgb(240, 164, 24);
+}
+
+.github h5 {
+    color: rgb(30, 30, 31);
+}
+
+.linkedin h5 {
+    color: rgb(53, 141, 241);
+}
+
+.card-info h4 {
+    font-size: 2rem;
+}
+
+.card-info p {
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 0.1rem;
+}
+
+.card-out span {
+    margin-left: auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color:#999;
+}
+
+
