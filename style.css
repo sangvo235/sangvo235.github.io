@@ -13,6 +13,7 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 2000;
 }
 
 li {
@@ -69,8 +70,8 @@ a {
     background-color: white;
 }
 
-    /* IPad Air has dimensions of 820 x 1180, dynamically turns into hamburger menu for widths under the dimensions of IPad Air */
-@media(max-width:1179px) {
+    /* If it is a iphone dynamically turns into hamburger menu*/
+@media(max-width:420px) {
     .hamburger {
         display: block;
     }
@@ -209,6 +210,27 @@ a {
     text-shadow: 0 0 10px rgba(255, 255, 255, .15);
 }
 
+@media(max-width:420px) {
+
+    .container {
+        height:100vh;
+    }
+    
+    .container img {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+    
+    .main-title {
+        left: 30%;
+        font-size: 1.6rem;
+    }
+    
+}
+
 #snow {
     position: absolute;
     top: 0;
@@ -334,6 +356,139 @@ a {
     color: rgb(248, 203, 126) !important;
 }
 
+/* Resizing Project Section for mobile devices  */
+@media(max-width: 420px) {
+    ::-webkit-scrollbar { width:0; height:0 }
+    ::-webkit-scrollbar-thumb { background: transparent}
+    ::-webkit-scrollbar-track { background-color: transparent}
+    
+    #nav-wrapper {
+      border:3px solid #444;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    ul,li {
+      list-style: none;
+      padding: 0
+    }
+    .nav.nav-tabs {
+      -webkit-overflow-scrolling: touch; /* apply iOS momentum scrolling effect to this element */
+      display: block;
+      overflow: auto;
+      white-space: nowrap
+    }
+    .nav.nav-tabs li {
+      display: inline-block
+     }
+    .nav.nav-tabs li a {
+      display: block;
+      background: mediumblue;
+      color: #fff;
+      padding: 16px
+    }
+
+    .projects h1 {
+        position: absolute;
+        top: 3rem;
+        font-size: 3rem;
+    }
+    
+    .projects-1, .projects-2, .projects-3 {
+        float: left;
+        min-width: 80%;
+        margin: 1em 1em 1em 1em;
+    }
+    
+    .project-box {
+        position: absolute;
+        display: block;
+        top: 20%;
+        width: 80%;
+        min-height: 75%;
+        padding: 4rem 2rem 2rem 2rem;
+        background-color: white;
+        border: 10px solid #97ade6;
+        border-radius: 4px;
+        box-shadow: 0.1rem 0.2rem rgba(0,0,0,0.3);
+    }
+    
+    .project-name {
+        font-size: 70%;
+        position: absolute;
+        top: 15px;
+        display: block;
+    }
+    
+    .project-name h2 {
+        color: black;
+    }
+    
+    .image-wrapper2 {
+        width: 14rem;
+        height: 13rem;
+        display: block;
+        justify-content: center;    
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+    
+    .image-wrapper2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .project-tech {
+        margin: 0.3em;
+        text-align: center;
+    }
+    
+    .project-tech img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Resizing some images to fit through using pseudo selector */
+    .projects-2 .project-tech img:nth-child(5), img:nth-child(6), img:nth-child(7) {
+        object-fit: scale-down;
+    }
+    
+    .projects-3 .project-tech img:nth-child(3) {
+        object-fit: scale-down;
+    }
+    
+    .project-bio p {
+        display: relative;
+        color:black;
+        font-size: 65%;
+    }
+    
+    .project-bio .icon-wrapper {
+        gap: 50px;
+        margin: 1rem 0 0 5rem;
+        font-size: 0.7rem;
+    }
+    
+    .project-bio .icon-wrapper i {
+        font-size: 1.5rem;
+        color: black;
+    }
+    
+    .project-bio .icon-wrapper h5 {
+        color: black;
+        padding-top: 4px;
+    }
+    
+    .project-bio .icon-demo i {
+        color:rgb(53, 141, 241);
+    }
+    
+    .project-bio .icon-demo h5 {
+        color:rgb(53, 141, 241);
+    }
+    
+}
+
 .experience {
     width: 100%;
     background-color: #102044;
@@ -390,6 +545,73 @@ a {
     color: rgb(240, 164, 24);
     font-size: 1.3rem;
 }
+
+
+/* Resizing Project Section for mobile devices  */
+@media(max-width: 420px) {
+    
+    .experience h1 {
+        font-size: 3rem;
+    }
+    
+    .experience-1, .experience-2, .experience-3 {
+        margin: 0 25% 0 25%;
+    }
+    
+    .experience-card {
+        box-shadow: 2rem 2rem rgba(0,0,0,0.3);
+    }    
+
+    .image-wrapper3 {
+        float: left;
+        margin-right: 15px;
+        margin-top: -10px;
+    }
+    
+    .image-wrapper3 img {
+        height: 5rem;
+        width: 50px;
+        padding-left: 15px;
+        object-fit: scale-down;
+    }
+    
+    .experience-bio p {
+        margin-top: 0.8rem;
+        margin-bottom: 0.3rem;
+        font-size: 0.8rem;        
+        padding-left: 10px;   
+    }
+    
+    .experience-bio h2 {
+        font-size: 0.9rem;
+        padding-top: 24px;
+        padding-left: 10px;   
+    }
+    
+    .experience-bio h3 {
+        font-size: 0.7rem;
+        padding-left: 10px;   
+    }
+
+    .experience-bio p:last-child {
+        font-size: 0.6rem;
+    }
+
+    .experience-1 .experience-card {
+        height: 205px;
+    }
+
+    .experience-2 .experience-card {
+        height: 135px;
+    }
+      
+    .experience-3 .experience-card {
+        height: 155px;
+    }
+    
+}
+
+
 
 .about {
     width: 100%;
@@ -621,4 +843,52 @@ a {
     color:#999;
 }
 
+/* Resizing Project Section for mobile devices  */
+@media(max-width:420px) {
 
+    .about h1 {
+        font-size: 3rem;
+    }
+    
+    .card {
+        width: 20rem;
+        margin: 0 20% 0 11%;
+    }
+
+    .card-bio {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    
+    .image-wrapper {
+        margin-top: 2em;
+        width: 30rem;
+        height: 6rem;
+    }
+    
+    .card-info h4 {
+        font-size: 1.5rem;
+    }
+    
+    .card-info p {
+        font-size: 0.8rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .card-btn {
+        right: 5rem;
+        font-size: 1rem;
+    }
+
+    .change .card-btn {
+        width: 4rem;
+        height: 4rem;
+        right: -2rem;
+        bottom: -2rem;
+        border-radius: 50%;
+    }
+
+    .card-contact h5 {
+        font-size: 1rem;
+    }
+
+}
