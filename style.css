@@ -350,6 +350,7 @@ a {
     color:rgb(53, 141, 241);
 }
 
+
 /* Logic for changing colours when hovering over text/icon
     Use !important to overide previous black/blue colour */
 .icon-wrapper i:hover, .icon-wrapper h5:hover {
@@ -358,34 +359,6 @@ a {
 
 /* Resizing Project Section for mobile devices  */
 @media(max-width: 420px) {
-    ::-webkit-scrollbar { width:0; height:0 }
-    ::-webkit-scrollbar-thumb { background: transparent}
-    ::-webkit-scrollbar-track { background-color: transparent}
-    
-    #nav-wrapper {
-      border:3px solid #444;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    ul,li {
-      list-style: none;
-      padding: 0
-    }
-    .nav.nav-tabs {
-      -webkit-overflow-scrolling: touch; /* apply iOS momentum scrolling effect to this element */
-      display: block;
-      overflow: auto;
-      white-space: nowrap
-    }
-    .nav.nav-tabs li {
-      display: inline-block
-     }
-    .nav.nav-tabs li a {
-      display: block;
-      background: mediumblue;
-      color: #fff;
-      padding: 16px
-    }
 
     .projects h1 {
         position: absolute;
