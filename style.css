@@ -365,24 +365,32 @@ a {
 /* Resizing Project Section for mobile devices  */
 @media(max-width: 420px) {
 
+    .projects-1 .project-box {
+        width: 110%;
+        height: 43em;
+    }
+    .projects-2 .project-box, .projects-3 .project-box {
+        width: 110%;
+        height: 44em;
+    }
+
     .projects-1 {
         position: absolute;
-        top: 20%;
+        top: 18%;
+        left: 2%;
     }
 
     .projects-2 {
         position: absolute;
-        top: 130%;
-    }
+        top: 128%;
+        left: 2%;
 
-    .projects-1 .project-box, .projects-2 .project-box, .projects-3 .project-box {
-        width: 110%;
-        height: 43em;
     }
 
     .projects-3 {
         position: absolute;
-        top: 240%;
+        top: 238%;
+        left: 2%;
     }
 
     .projects h1 {
@@ -517,7 +525,7 @@ a {
     }
     
     .experience-card {
-        height: 11rem;;
+        height: 11rem;
         box-shadow: 1.5rem 1.5rem rgba(0,0,0,0.3);
     }    
     
@@ -550,7 +558,7 @@ a {
     }
     
     .experience-bio h3 {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
     }   
 }
 
