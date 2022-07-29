@@ -64,5 +64,3 @@ document.querySelector(".card-btn").addEventListener
   ("click", () => {
   document.querySelector(".about").classList.toggle("change");
 });
-
-    

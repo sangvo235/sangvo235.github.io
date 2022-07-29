@@ -120,6 +120,7 @@ a {
     transform: translateY(-40%);
     font-size: 1.25vmax;
     letter-spacing: 0.3vmax;    
+    z-index: -2;
 }
 
 .container .words span {
@@ -190,7 +191,7 @@ a {
 }
 
 .container {
-    height:100vh;
+    height: 100vh;
 }
 
 .container img {
@@ -212,10 +213,12 @@ a {
 
 @media(max-width:420px) {
 
-    .container {
-        height:100vh;
+    .hi {
+        min-height: 200vh; 
+        background-color: #102044;
+        width: 100%;
     }
-    
+
     .container img {
         position: absolute;
         width: 100%;
@@ -225,10 +228,12 @@ a {
     }
     
     .main-title {
+        position: absolute;
+        top: 15%;
         left: 30%;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        transform: translate(-40%, -40%);
     }
-    
 }
 
 #snow {
@@ -360,6 +365,25 @@ a {
 /* Resizing Project Section for mobile devices  */
 @media(max-width: 420px) {
 
+    .projects {
+        position: absolute;
+    }
+
+    .projects-2 {
+        position: absolute;
+        top: 110%;
+    }
+
+    .projects-2 .project-box, .projects-3 .project-box {
+        width: 100%;
+        height: 43em;
+    }
+
+    .projects-3 {
+        position: absolute;
+        top: 205%;
+    }
+
     .projects h1 {
         position: absolute;
         top: 3rem;
@@ -387,28 +411,11 @@ a {
     
     .project-name {
         font-size: 70%;
-        position: absolute;
-        top: 15px;
-        display: block;
     }
-    
-    .project-name h2 {
-        color: black;
-    }
-    
+
     .image-wrapper2 {
-        width: 14rem;
-        height: 13rem;
-        display: block;
-        justify-content: center;    
-        border: 2px solid black;
-        border-radius: 4px;
-    }
-    
-    .image-wrapper2 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 16rem;
+        height: 20rem;
     }
     
     .project-tech {
@@ -417,49 +424,26 @@ a {
     }
     
     .project-tech img {
-        width: 20px;
-        height: 20px;
-    }
-    
-    /* Resizing some images to fit through using pseudo selector */
-    .projects-2 .project-tech img:nth-child(5), img:nth-child(6), img:nth-child(7) {
-        object-fit: scale-down;
-    }
-    
-    .projects-3 .project-tech img:nth-child(3) {
-        object-fit: scale-down;
+        width: 30px;
+        height: 30px;
     }
     
     .project-bio p {
         display: relative;
         color:black;
-        font-size: 65%;
+        font-size: 85%;
     }
     
     .project-bio .icon-wrapper {
         gap: 50px;
-        margin: 1rem 0 0 5rem;
-        font-size: 0.7rem;
+        margin: 1.7rem 0 1rem 6rem;
+        font-size: 0.8rem;
     }
-    
-    .project-bio .icon-wrapper i {
-        font-size: 1.5rem;
-        color: black;
-    }
-    
+
     .project-bio .icon-wrapper h5 {
-        color: black;
-        padding-top: 4px;
+        margin-left: 4px;
     }
-    
-    .project-bio .icon-demo i {
-        color:rgb(53, 141, 241);
-    }
-    
-    .project-bio .icon-demo h5 {
-        color:rgb(53, 141, 241);
-    }
-    
+
 }
 
 .experience {
@@ -524,67 +508,49 @@ a {
 @media(max-width: 420px) {
     
     .experience h1 {
-        font-size: 3rem;
+        font-size: 3rem; 
     }
     
     .experience-1, .experience-2, .experience-3 {
-        margin: 0 25% 0 25%;
+        margin: 0 16% 0 16%;
     }
     
     .experience-card {
         box-shadow: 2rem 2rem rgba(0,0,0,0.3);
     }    
-
+    
     .image-wrapper3 {
         float: left;
-        margin-right: 15px;
-        margin-top: -10px;
+        margin: 15px 15px -15px 15px;
     }
-    
+
     .image-wrapper3 img {
-        height: 5rem;
+        height: 3rem;
         width: 50px;
-        padding-left: 15px;
-        object-fit: scale-down;
+        object-fit: cover;
     }
-    
+
+    .experience-bio {
+        text-align: center;
+    }
+
     .experience-bio p {
-        margin-top: 0.8rem;
-        margin-bottom: 0.3rem;
-        font-size: 0.8rem;        
-        padding-left: 10px;   
+        font-size: 0.9rem;
+        margin-bottom: 1em;
+    }
+
+    .experience-2 p {
+        margin-bottom: 2em;
     }
     
     .experience-bio h2 {
-        font-size: 0.9rem;
-        padding-top: 24px;
-        padding-left: 10px;   
+        font-size: 1rem;
     }
     
     .experience-bio h3 {
-        font-size: 0.7rem;
-        padding-left: 10px;   
-    }
-
-    .experience-bio p:last-child {
-        font-size: 0.6rem;
-    }
-
-    .experience-1 .experience-card {
-        height: 205px;
-    }
-
-    .experience-2 .experience-card {
-        height: 135px;
-    }
-      
-    .experience-3 .experience-card {
-        height: 155px;
-    }
-    
+        font-size: 0.9rem;
+    }   
 }
-
-
 
 .about {
     width: 100%;
@@ -817,7 +783,7 @@ a {
 }
 
 /* Resizing Project Section for mobile devices  */
-@media(max-width:420px) {
+@media(max-width: 420px) {
 
     .about h1 {
         font-size: 3rem;
