@@ -214,7 +214,7 @@ a {
 @media(max-width:420px) {
 
     .hi {
-        min-height: 200vh; 
+        min-height: 250vh; 
         background-color: #102044;
         width: 100%;
     }
@@ -365,23 +365,24 @@ a {
 /* Resizing Project Section for mobile devices  */
 @media(max-width: 420px) {
 
-    .projects {
+    .projects-1 {
         position: absolute;
+        top: 20%;
     }
 
     .projects-2 {
         position: absolute;
-        top: 110%;
+        top: 130%;
     }
 
-    .projects-2 .project-box, .projects-3 .project-box {
-        width: 100%;
+    .projects-1 .project-box, .projects-2 .project-box, .projects-3 .project-box {
+        width: 110%;
         height: 43em;
     }
 
     .projects-3 {
         position: absolute;
-        top: 205%;
+        top: 240%;
     }
 
     .projects h1 {
@@ -516,7 +517,8 @@ a {
     }
     
     .experience-card {
-        box-shadow: 2rem 2rem rgba(0,0,0,0.3);
+        height: 11rem;;
+        box-shadow: 1.5rem 1.5rem rgba(0,0,0,0.3);
     }    
     
     .image-wrapper3 {
@@ -535,12 +537,12 @@ a {
     }
 
     .experience-bio p {
-        font-size: 0.9rem;
-        margin-bottom: 1em;
+        font-size: 0.7rem;
+        margin-bottom: 1.5em;
     }
 
     .experience-2 p {
-        margin-bottom: 2em;
+        margin-bottom: 3em;
     }
     
     .experience-bio h2 {
@@ -790,7 +792,7 @@ a {
     }
     
     .card {
-        width: 20rem;
+        width: 18rem;
         margin: 0 20% 0 11%;
     }
 
@@ -814,7 +816,7 @@ a {
     }
 
     .card-btn {
-        right: 5rem;
+        right: 4rem;
         font-size: 1rem;
     }
 
@@ -828,6 +830,10 @@ a {
 
     .card-contact h5 {
         font-size: 1rem;
+    }
+
+    .card-out {
+        padding: 0.5rem;
     }
 
 }
