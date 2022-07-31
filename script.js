@@ -1,3 +1,9 @@
+/* author: Sang Vo
+created: 22/07/22
+last modified: 30/07/22
+description: JavaScript file for index.html */
+
+
 // Scrolling Logic for Nav Bar
 $(document).ready(function(){
   // Add smooth scrolling to all links

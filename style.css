@@ -1,3 +1,8 @@
+/* author: Sang Vo
+created: 22/07/22
+last modified: 30/07/22
+description: CSS file for index.html */
+
 *{
     margin: 0;
     padding: 0;
@@ -70,8 +75,8 @@ a {
     background-color: white;
 }
 
-    /* If it is a iphone dynamically turns into hamburger menu*/
-@media(max-width:420px) {
+/* Dynamically turns into hamburger menu when it's a mobile device or smaller tablet*/
+@media(max-width: 920px) {
     .hamburger {
         display: block;
     }
@@ -211,7 +216,16 @@ a {
     text-shadow: 0 0 10px rgba(255, 255, 255, .15);
 }
 
-@media(max-width:420px) {
+/* MacBook Pro 13inch */
+@media(max-width:1440px) { 
+    
+    .main-title {
+        font-size: 3.5rem;
+    }  
+}
+
+/* Resizing Home section for mobile devices & smaller tablets */
+@media(max-width:920px) {
 
     .hi {
         min-height: 250vh; 
@@ -327,7 +341,6 @@ a {
 }
 
 .project-bio p {
-    display: relative;
     color:black;
 }
 
@@ -348,7 +361,6 @@ a {
 
 .project-bio .icon-demo i {
     color:rgb(53, 141, 241);
-    size: 2rem;
 }
 
 .project-bio .icon-demo h5 {
@@ -362,8 +374,40 @@ a {
     color: rgb(248, 203, 126) !important;
 }
 
-/* Resizing Project Section for mobile devices  */
-@media(max-width: 420px) {
+/* MacBook Pro 13inch */
+@media(max-width:1440px) { 
+
+    .projects h1 {
+        position: absolute;
+        top: 3rem;
+        font-size: 4rem;
+    }
+
+    .projects-1 .project-box, .projects-2 .project-box, .projects-3 .project-box {
+        height: 44em;
+    }
+
+    .project-name {
+        font-size: 70%;
+    }
+    
+    .project-tech img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .project-bio p {
+        font-size: 85%;
+    }
+    
+    .project-bio .icon-wrapper {
+        margin: 1.7rem 0 1rem 9rem;
+    }
+
+}
+
+/* Resizing Project Section for mobile devices & smaller tablets */
+@media(max-width: 920px) {
 
     .projects-1 .project-box {
         width: 110%;
@@ -384,7 +428,6 @@ a {
         position: absolute;
         top: 128%;
         left: 2%;
-
     }
 
     .projects-3 {
@@ -438,7 +481,6 @@ a {
     }
     
     .project-bio p {
-        display: relative;
         color:black;
         font-size: 85%;
     }
@@ -462,7 +504,6 @@ a {
 }
 
 .experience h1 {
-    position: flex;
     font-size: 4rem;
     padding-top: 5%;
     padding-bottom: 4%;
@@ -512,9 +553,23 @@ a {
     font-size: 1.3rem;
 }
 
+/* MacBook Pro 13inch */
+@media(max-width:1440px) {
 
-/* Resizing Project Section for mobile devices  */
-@media(max-width: 420px) {
+    .experience-card {
+        height: 11rem;
+    }    
+    
+    .image-wrapper3 img {
+        height: 11rem;
+        width: 150px;
+        object-fit: cover;
+    }
+}
+
+
+/* Resizing Experience section for mobile devices & smaller tablets */
+@media(max-width: 920px) {
     
     .experience h1 {
         font-size: 3rem; 
@@ -571,7 +626,6 @@ a {
 }
 
 .about h1 {
-    position: flex;
     font-size: 4rem;
     padding-top: 5%;
     padding-bottom: 4%;
@@ -792,8 +846,16 @@ a {
     color:#999;
 }
 
-/* Resizing Project Section for mobile devices  */
-@media(max-width: 420px) {
+/* MacBook Pro 13inch */
+@media(max-width:1440px) {
+
+    .card {
+        margin: 0 0 0 31.5%;
+    }
+}
+
+/* Resizing Contact Me section for mobile devices & smaller tablets */
+@media(max-width: 920px) {
 
     .about h1 {
         font-size: 3rem;
@@ -843,5 +905,4 @@ a {
     .card-out {
         padding: 0.5rem;
     }
-
 }
