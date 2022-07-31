@@ -645,6 +645,7 @@ a {
     }
     .projects-1 .project-box, .projects-2 .project-box, .projects-3 .project-box {
         height: 41em;
+        margin-top: 2em;
     }
 
     .project-name {
@@ -698,8 +699,8 @@ a {
 @media(max-height: 800px) {
 
     .experience {
-        min-height: 140vh;
-        padding-top: 20vh;
+        min-height: 170vh;
+        padding-top: 30vh;
     }
 
     .about {
