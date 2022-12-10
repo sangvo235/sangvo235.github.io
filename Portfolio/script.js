@@ -50,7 +50,7 @@ let projects = [
 },
 {
   name: "Java GUI Parking Spot System",
-  image: "images/parking_system.png",
+  image: "images/parking_system.PNG",
   tech1: "images/nothing.png",
   tech2: "images/nothing.png", 
   tech3: "images/java_logo.svg",
