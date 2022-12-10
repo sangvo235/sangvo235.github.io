@@ -299,7 +299,7 @@ a {
 .cardDescriptionBox > p {
     max-height: 100%;
     width: 90%;
-    font-size: 2vmin;
+    font-size: 1.9vmin;
     color: black;
 }
 .cardLinkWrapper {
@@ -735,7 +735,6 @@ a {
     .experience h1 {
         font-size: 3rem; 
     }
-    
     .expCard {
         width: 130%;
         height: 10rem;
