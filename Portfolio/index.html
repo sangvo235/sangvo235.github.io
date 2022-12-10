@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Website/Project Portfolio">
+    <meta name="key words" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sang Vo">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/sv_favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/84be7e67ba.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Sang Vo</title>
+</head>
+
+<body id="home">    
+    <section class="section1">
+        <!-- NAV BAR -->
+        <header>
+            <nav class="navbar"> 
+                <a href="#" class="nav-logo">SANG VO</a>    
+                    <ul class="nav-menu"> 
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#experience" class="nav-link">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">Contact Me</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+            </nav>
+        </header>
+        
+        <!-- HOME PAGE DISPLAY AREA & EFFECTS-->
+        <div class="container">
+            <h2 class="main-title">
+                <p>Hello, I'm Sang.</p>
+                <div class="words"> 
+                    I'm a
+                    <span>&nbsp;Master of IT student</span>
+                    <span>&nbsp;Software Developer</span>
+                    <span>&nbsp;foodie</span>
+                    <span>&nbsp;painter</span>
+                    <span>&nbsp;fragrance collector</span>
+                    <span>lways drinking coffee</span>
+                    <span>&nbsp;gelato connoisseur</span>
+                </div>
+                <p class="seemore">See What I've Created<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-chevron-down"></i></p>
+            </h2>
+            
+            <div id="snow">
+                <img src="images/bg_base.png" class="bg_base" alt="" />
+            </div>
+                <img src="images/bg_mid.png" class="bg_mid" alt="" />
+                <img src="images/bg_top.png" class="bg_top" alt="" />
+        </div>
+
+        <!-- PROJECT SECTION -->
+        <div class="projects" id="projects">
+            <h1>Projects</h1>
+        </div> 
+    
+        <div class="hi"></div>
+    </section>
+
+    <!-- Experience SECTION -->
+    <section class="section2" >
+        <div class="experience" id="experience">
+            <h1>Experience</h1>
+        </div>
+    </section>
+
+    <!-- About/Contact Me SECTION -->
+    <section class="section3" >
+        <div class="about" id="about">
+            <h1>Contact Me</h1>
+        <div class="card">
+            <div id="contact-container" data-aos="fade-down-right" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out-sine" data-aos-anchor-placement="center-bottom">
+                <div class="card-bio">
+                    <div class="image-wrapper">
+                        <img src="images/coffee.jpg" width="100" alt="" />
+                    </div>
+
+                    <div class="card-info">
+                        <h4>Fun Fact:</h4>
+                        <p>Aside from coding, I can also make latte art! Click Below to learn more about me.</p>
+                    </div>
+
+                    <button class="card-btn">
+                        <span class="card-btn-info">Contact Me</span>
+                        <i class="fas fa-angle-up"></i>                
+                    </button>
+                </div>
+
+                <div class="card-contact">
+                    <h5>Let's chat!</h5>
+                </div>
+
+                <!-- Email -->
+                <a href="mailto:sangvo235@gmail.com">
+                    <div class="card-out email">
+                        <div class="icon-wrapper">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="link-details email">
+                            <h5>Email</h5>
+                        </div>
+                        <span>></span>
+                    </div>
+                </a> 
+
+                <!-- GitHub-->
+                <a href="https://github.com/sangvo235">
+                    <div class="card-out github">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="link-details github">
+                            <h5>Github</h5>
+                        </div>
+                        <span>></span>
+                    </div>
+                </a>
+            
+                <!-- LinkedIn -->
+                <a href="https://au.linkedin.com/in/sangvo235">
+                    <div class="card-out linkedin">
+                        <div class="icon-wrapper">
+                            <i class="fa fa-linkedin"></i>
+                        </div>
+                        <div class="link-details linkedin">
+                            <h5>LinkedIn</h5>
+                        </div>
+                        <span>></span>
+                    </div>
+                </a>
+                </div>
+            </div>
+    </section>
+    
+    <!-- Card Animation Script-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    
+    <!-- JS-Scroll Magic, JS-Particle, JS-Swipe -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    
+    <script type="text/javascript" src="particles.min.js"></script>
+    <script type="text/javascript" src="custom.js"></script>
+
+    <script src="script.js"></script>   
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+</body>
+</html>
