@@ -1,6 +1,6 @@
 /* author: Sang Vo
 created: 22/07/22
-last modified: 30/07/22
+last modified: 11/12/22
 description: CSS file for index.html */
 
 *{
@@ -21,16 +21,13 @@ header {
     top: 0;
     z-index: 2000;
 }
-
 li {
     list-style: none;
 }
-
 a {
     color: white;
     text-decoration: none;
 }
-
 .navbar {
     min-height: 70px;
     display: flex;
@@ -38,7 +35,6 @@ a {
     align-items: center;
     padding: 0 24px;
 }
-
 .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -46,7 +42,6 @@ a {
     gap: 10rem;
     padding-right: 5rem;
 }
-
 .nav-logo {
     font-size: 2rem;
 }
@@ -55,7 +50,6 @@ a {
 .nav-link {
     transition: 0.7s ease;
 }
-
 .nav-link:hover {
     color: rgb(248, 203, 126);
 }
@@ -65,7 +59,6 @@ a {
     display: none;
     cursor: pointer;
 }
-
 .bar {
     display: block;
     width: 25px;
@@ -81,23 +74,18 @@ a {
     .hamburger {
         display: block;
     }
-
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
     }
-
     .hamburger.active .bar:nth-child(3){
         opacity: 0;
     }
-
     .hamburger.active .bar:nth-child(1){
         transform: translateY(12px) rotate(45deg);
     }
-
     .hamburger.active .bar:nth-child(4){
         transform: translateY(-12px) rotate(-45deg);
     }
-
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -110,11 +98,9 @@ a {
         text-align: center;
         transition: 0.3s;
     }
-    
     .nav-item {
         margin: 16px 0;
-    }
-    
+    }  
     .nav-menu.active {
         left: 0;
     }
@@ -140,31 +126,24 @@ a {
 .container .words span:nth-child(2) {
     animation-delay: 2s;
 }
-
 .container .words span:nth-child(3) {
     animation-delay: 4s;
 }
-
 .container .words span:nth-child(4) {
     animation-delay: 6s;
 }
-
 .container .words span:nth-child(5) {
     animation-delay: 8s;
 }
-
 .container .words span:nth-child(6) {
     animation-delay: 10s;
 }
-
 .container .words span:nth-child(7) {
     animation-delay: 12s;
 }
-
 .container .words span:nth-child(8) {
     animation-delay: 14s;
 }
-
 .container .words span:nth-child(9) {
     animation-delay: 16s;
 }
@@ -174,22 +153,18 @@ a {
         opacity: 0;
         transform: translateY(-50px);
     }
-
     2% {
         opacity: 1;
         transform: translateY(0);
     }
-    
     10% {
         opacity: 1;
         transform: translateY(0);
     }
-
     12% {
         opacity: 0;
         transform: translateY(50px);
     }
-
     100% {
         opacity: 0;
         transform: translateY(50px);
@@ -198,8 +173,8 @@ a {
 
 .container {
     height: 100vh;
+    position: relative;
 }
-
 .container img {
     position: absolute;
     width: 100%;
@@ -207,13 +182,12 @@ a {
     object-fit: cover;
     z-index: -1;
 }
-
 .main-title {
     position: absolute;
-    top: 40%;
-    left: 40%;
     font-size: 5rem;
-    transform: translate(-40%, -40%);
+    top: 20%;
+    left: 40%;
+    transform: translate(-40%, 40%);
     text-shadow: 0 0 10px rgba(255, 255, 255, .15);
 }
 
@@ -229,138 +203,137 @@ a {
 
 /* Project Section Styling */
 .projects {
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;    
     background-color: #102044;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     min-height: 100vh;
+    height: 430vh;
     position: absolute;
     z-index: 2;
 }
-
-.projects h1 {
-    position: absolute;
-    top: 4.8rem;
-    font-size: 4rem;
+.projects > h1 {
+    font-size: 5em;
 }
-
-.projects-1, .projects-2, .projects-3 {
-    float: left;
-    width: 30%;
-    text-align: justify;
-    margin: 1em 1em 1em 1em;
-}
-
-.project-box {
-    position: absolute;
-    top: 20%;
-    width: 30%;
-    min-height: 75%;
-    padding: 4rem 2rem 2rem 2rem;
+.pcard {
     display: flex;
     background-color: white;
+    flex-direction: column;
+    align-items: center;
+    width: 80vmin;
+    height: 80vmin;
+    padding: 1vw 1vw 2vw 1vw;
     border: 10px solid #97ade6;
     border-radius: 4px;
-    box-shadow: 0.1rem 0.2rem rgba(0,0,0,0.3);
+    box-shadow: 3rem 3rem rgba(0,0,0,0.3);
 }
-
-.project-name {
-    position: absolute;
-    top: 15px;
+.pcard > h2 {
     display: block;
-}
-
-.project-name h2 {
     color: black;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 15px;
 }
-
-.image-wrapper2 {
-    width: 150rem;
-    height: 23rem;
-    display: block;
+.pcard > img {
+    width: 100%;
+    height: 53%;
+    object-fit: cover;
     justify-content: center;    
     border: 2px solid black;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
-
-.image-wrapper2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.pcard:nth-child(2) {
+    height: 92vmin;
 }
-
-.project-tech {
+.pcard:nth-child(2) > img {
+    width: 40%;
+    height: 65%;
+}
+.cardProjectTech {
     margin: 0.3em;
     text-align: center;
 }
-
-.project-tech img {
+.cardProjectTech > img {
+    object-fit: scale-down;
     width: 50px;
-    height: 50px;
+    height: 50px; 
 }
-
-/* Resizing some images to fit through using pseudo selector */
-.projects-2 .project-tech img:nth-child(5), img:nth-child(6), img:nth-child(7) {
-    object-fit: scale-down;
+.cardDescriptionBox {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    align-items: center;
 }
-
-.projects-3 .project-tech img:nth-child(3) {
-    object-fit: scale-down;
+.cardDescriptionBox > p {
+    max-height: 100%;
+    width: 90%;
+    font-size: 1.9vmin;
+    color: black;
 }
-
-.project-bio p {
-    color:black;
-}
-
-.project-bio .icon-wrapper {
+.cardLinkWrapper {
     gap: 50px;
-    margin: 1.7rem 0 0 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
-
-.project-bio .icon-wrapper i {
+.cardLinkWrapper > a {
     font-size: 3rem;
+}
+.cardLinkWrapper > a:first-child {
+    color:rgb(53, 141, 241);
+    gap:50px;
+}
+.cardLinkWrapper > a:nth-child(2) {
     color: black;
 }
-
-.project-bio .icon-wrapper h5 {
+.cardLinkWrapper > a > h3 {
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+.cardLinkWrapper > a:first-child > h3 {
+    color:rgb(53, 141, 241);
+}
+.cardLinkWrapper > a:nth-child(2) > h3 {
     color: black;
-    padding-top: 4px;
-}
-
-.project-bio .icon-demo i {
-    color:rgb(53, 141, 241);
-}
-
-.project-bio .icon-demo h5 {
-    color:rgb(53, 141, 241);
-}
-
+} 
 /* Logic for changing colours when hovering over text/icon
     Use !important to overide previous black/blue colour */
-.icon-wrapper i:hover, .icon-wrapper h5:hover {
+.cardLinkWrapper > a:hover, .cardLinkWrapper > a:hover > h3 {
     color: rgb(248, 203, 126) !important;
+}
+
+/* Page extension due to parallax scroll page pin */
+.hi {
+    min-height: 360vh; 
+    background-color: #102044;
+    width: 100%;
 }
 
 /* Experience Section Styling */
 .experience {
-    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20vh 20vw;
+    width: 100vw;
+    max-width: 100%;
+    height: 155vh;
     background-color: #102044;
-    min-height: 100vh;
 }
-
 .experience h1 {
-    font-size: 4rem;
-    padding-top: 5%;
-    padding-bottom: 4%;
+    font-size: 5em;
+    margin-top: -10%;
+    padding-bottom: 2.3em;
     text-align: center;
 }
-
-.experience-1, .experience-2, .experience-3 {
-    margin: 0 25% 0 25%;
-}
-
-.experience-card {
+.expCard {
     width: 100%;
     height: 13rem;
     background-color: white;
@@ -370,31 +343,25 @@ a {
     outline: thick solid #97ade6;
     float: left;
 }
-
-.image-wrapper3 {
+.expCard > img {
     float: left;
     margin-right: 30px;
-}
-
-.image-wrapper3 img {
     height: 12.7rem;
     width: 200px;
     object-fit: cover;
 }
-
-.experience-bio p {
+.cardExperienceBox > p {
     color: black;
     margin-top: 1rem;
     margin-bottom: 0.3rem;
     font-size: 1.2rem;
 }
-
-.experience-bio h2 {
+.cardExperienceBox > h2 {
     color: black;
     font-size: 1.5rem;
+    padding-top: 10px;
 }
-
-.experience-bio h3 {
+.cardExperienceBox > h3 {
     color: rgb(240, 164, 24);
     font-size: 1.3rem;
 }
@@ -405,23 +372,20 @@ a {
     background-color: #102044;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 130vh;
 }
-
 .about h1 {
-    font-size: 4rem;
+    font-size: 5em;
     padding-top: 5%;
-    padding-bottom: 4%;
+    padding-bottom: 2.3em;
     text-align: center;
 }
-
 .card {
     width: 33rem;
     display: block;
     box-sizing: border-box;
     margin: 0 36% 0 36%;
 }
-
 .card-bio {
     background-color: #97ade6;
     padding: 2rem 2rem 6rem 2rem;
@@ -430,7 +394,6 @@ a {
     position: relative;
     z-index: 100;
 }
-
 .card-info img {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -438,11 +401,9 @@ a {
     height:100%;
     object-fit: cover;
 }
-
 .card-info {
     text-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.3);
 }
-
 .card-contact {
     background-color: #5e79c4;
     color: white;
@@ -451,11 +412,9 @@ a {
     transform: translateY(-100%); 
     transition: all 0.5s;
 }
-
 .change .card-contact {
     transform: translateY(0);
 }
-
 .card-contact h5 {
     font-size: 1.6rem;
     font-weight: 500;
@@ -466,24 +425,20 @@ a {
     transform-origin: left;
     transition: all 0.5s;
 }
-
 .change .card-contact h5 {
     transform: scale(1);
 }
-
 .image-wrapper {
     width: 36rem;
     height: 10rem;
     margin-right: 3rem;
 }
-
 .image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
-
 .card-btn {
     position: absolute;
     bottom: -2.5rem;
@@ -500,48 +455,40 @@ a {
     cursor: pointer;
     transition: all 0.5s;
 }
-
 /* Logic for changing colours when hovering over contact me button & "^"
     Use !important to overide previous white colour */
 .card-btn span:hover, .card-btn i:hover  {
     color: rgb(240, 164, 24) !important;
 }
-
 .change .card-btn {
     width: 6rem;
     right: -3rem;
     bottom: -3rem;
     border-radius: 50%;
 }
-
 .card-btn-info {
     transition: all 0.5s 0.1s;
 }
-
 .card-btn i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .change .card-btn-info {
     opacity: 0;
     visibility: hidden;
     transition: all 0.1s; 
 }
-
 .card-btn i {
     opacity: 0;
     visibility: hidden;
 }
-
 .change .card-btn i {
     opacity: 1;
     visibility: visible;
     transition: all 0.5s;
 }
-
 .card-out {
     background-color: #fff;
     padding: 1.2rem;
@@ -554,25 +501,20 @@ a {
     opacity: 0; 
     visibility: hidden;
 }
-
 .change .card-out {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
 }
-
 .email {
     transition: all .5s .3s;  
 }
-
 .github {
     transition: all .5s .5s;  
 }
-
 .linkedin {
     transition: all .5s .7s;  
 }
-
 .icon-wrapper {
     width: 3rem;
     height: 3rem;
@@ -582,46 +524,36 @@ a {
     align-items: center;
     margin-right: 1.6rem;
 }
-
 .email .icon-wrapper {
     background-color: rgb(240, 164, 24);
 }
-
 .github .icon-wrapper {
     background-color: rgb(30, 30, 31);
 }
-
 .linkedin .icon-wrapper {
     background-color: rgb(53, 141, 241);
 }
-
 .icon-wrapper i {
     font-size: 2rem;
     color: #fff;
 }
-
 .email h5 {
     color: rgb(240, 164, 24);
 }
-
 .github h5 {
     color: rgb(30, 30, 31);
 }
-
 .linkedin h5 {
     color: rgb(53, 141, 241);
 }
-
 .card-info h4 {
     font-size: 2rem;
 }
-
 .card-info p {
     font-size: 1.2rem;
     color: #fff;
     letter-spacing: 0.1rem;
 }
-
 .card-out span {
     margin-left: auto;
     font-size: 1.6rem;
@@ -636,60 +568,42 @@ a {
     .main-title {
         font-size: 3.5rem;
     }  
-
-    /* Project Section */
-    .projects h1 {
-        position: absolute;
-        top: 3rem;
-        font-size: 4rem;
-    }
-    .projects-1 .project-box, .projects-2 .project-box, .projects-3 .project-box {
-        height: 41em;
-        margin-top: 2em;
-    }
-
-    .project-name {
-        font-size: 70%;
-    }
     
-    .project-tech img {
-        width: 30px;
-        height: 30px;
+   /* Project Section */
+    .pcard {
+        height: 85vmin;
+        padding-bottom: 10em;
     }
-    
-    .project-bio p {
-        font-size: 85%;
+    .pcard > h2 {
+        font-size: 2rem;
     }
-    
-    .project-bio .icon-wrapper {
-        margin: 1.7rem 0 1rem 9rem;
+    .pcard > img {
+        height: 65%;
     }
-
-    .image-wrapper2 {
-        width: 22rem;
-        height: 20rem;
+    .pcard:nth-child(2) {
+        height: 95vmin;
+    }
+    .pcard:nth-child(2) > img {
+        width: 40%;
+        height: 73%;
     }
 
     /* Experience Section */
-    .experience-card {
+    .expCard {
         height: 13rem;
     }    
-    
-    .image-wrapper3 img {
+    .expCard > img {
         height: 12.8rem;
         width: 200px;
         object-fit: cover;
     }
-
     /* Contact Me Section */
     .about {
         min-height: 120vh;
     }
-
     .card {
         margin: 0 0 0 31.5%;
     }
-
     .card-bio {
         padding: 1rem 1rem 2.5rem 1rem;
     }
@@ -699,14 +613,15 @@ a {
 @media(max-height: 800px) {
 
     .experience {
-        min-height: 170vh;
+        min-height: 220vh;
         padding-top: 30vh;
     }
-
     .about {
-        min-height: 130vh;
+        min-height: 170vh;
     }
-
+    .hi {
+        min-height: 365vh; 
+    }
 }
 
 /* Resizing for mobile devices & smaller tablets */
@@ -714,11 +629,10 @@ a {
 
     /* Home Page */
     .hi {
-        min-height: 250vh; 
+        min-height: 190vh; 
         background-color: #102044;
         width: 100%;
     }
-
     .container img {
         position: absolute;
         width: 100%;
@@ -726,183 +640,106 @@ a {
         object-fit: cover;
         z-index: -1;
     }
-
     .main-title {
-        position: absolute;
-        top: 15%;
+        font-size: 1.6rem;
+        top: 30%;
         left: 30%;
-        font-size: 1.4rem;
-        transform: translate(-40%, -40%);
     }
 
     /* Project Section */
-    .projects-1 .project-box {
-        width: 110%;
-        height: 43em;
+    .projects {
+        height: 270vh;
     }
-
-    .projects-2 .project-box, .projects-3 .project-box {
-        width: 110%;
-        height: 44em;
+    .projects > h1 {
+            font-size: 3rem;
     }
-
-    .projects-1 {
-        position: absolute;
-        top: 18%;
-        left: 2%;
+    .pcard {
+        height: 100vmin;
     }
-
-    .projects-2 {
-        position: absolute;
-        top: 128%;
-        left: 2%;
+    .pcard > h2 {
+        font-size: 1rem;
     }
-
-    .projects-3 {
-        position: absolute;
-        top: 238%;
-        left: 2%;
+    .pcard > img {
+        width: 100%;
     }
-
-    .projects h1 {
-        position: absolute;
-        top: 3rem;
-        font-size: 3rem;
+    .pcard:nth-child(2) {
+        height: 102vmin;
     }
-    
-    .projects-1, .projects-2, .projects-3 {
-        float: left;
-        min-width: 80%;
-        margin: 1em 1em 1em 1em;
+    .pcard:nth-child(2) > img {
+        width: 40%;
+        height: 65%;
     }
-    
-    .project-box {
-        position: absolute;
-        display: block;
-        top: 20%;
-        width: 80%;
-        min-height: 75%;
-        padding: 4rem 2rem 2rem 2rem;
-        background-color: white;
-        border: 10px solid #97ade6;
-        border-radius: 4px;
-        box-shadow: 0.1rem 0.2rem rgba(0,0,0,0.3);
-    }
-    
-    .project-name {
-        font-size: 70%;
-    }
-
-    .image-wrapper2 {
-        width: 16rem;
-        height: 20rem;
-    }
-    
-    .project-tech {
-        margin: 0.3em;
-        text-align: center;
-    }
-    
-    .project-tech img {
+    .cardProjectTech > img {
+        object-fit: scale-down;
         width: 30px;
-        height: 30px;
+        height: 30px; 
     }
-    
-    .project-bio p {
-        color:black;
-        font-size: 85%;
+    .cardDescriptionBox > p {
+        font-size: 2.4vmin;
     }
-    
-    .project-bio .icon-wrapper {
-        gap: 50px;
-        margin: 1.7rem 0 1rem 6rem;
-        font-size: 0.8rem;
+    .cardLinkWrapper > a {
+        font-size: 1.5rem;
     }
-
-    .project-bio .icon-wrapper h5 {
-        margin-left: 4px;
+    .cardLinkWrapper > a > h3 {
+        font-size: 0.5rem;
     }
 
     /* Experience Section */
+    .experience {
+        width: 100vw;
+        max-width: 100%;
+        height: 160vh;
+    }
     .experience h1 {
         font-size: 3rem; 
     }
-    
-    .experience-1, .experience-2, .experience-3 {
-        margin: 0 16% 0 16%;
+    .expCard {
+        width: 130%;
+        height: 10rem;
     }
-    
-    .experience-card {
-        height: 11rem;
-        box-shadow: 1.5rem 1.5rem rgba(0,0,0,0.3);
-    }    
-    
-    .image-wrapper3 {
-        float: left;
-        margin: 15px 15px -15px 15px;
+    .expCard > img {
+        height: 9.7rem;
+        width: 120px;
+        margin-right: 10px;
     }
-
-    .image-wrapper3 img {
-        height: 3rem;
-        width: 50px;
-        object-fit: cover;
+    .cardExperienceBox > p {
+        font-size: 0.5rem; 
     }
-
-    .experience-bio {
-        text-align: center;
+    .cardExperienceBox > h2 {
+        font-size: 0.8rem;
+        padding-top: 10px;
     }
-
-    .experience-bio p {
-        font-size: 0.7rem;
-        margin-bottom: 1.5em;
+    .cardExperienceBox > h3 {
+        font-size: 0.6rem;
     }
-
-    .experience-2 p {
-        margin-bottom: 3em;
-    }
-    
-    .experience-bio h2 {
-        font-size: 1rem;
-    }
-    
-    .experience-bio h3 {
-        font-size: 0.75rem;
-    }   
 
     /* Contact Me Section */
     .about h1 {
         font-size: 3rem;
     }
-
     .card {
         width: 18rem;
         margin: 0 20% 0 11%;
     }
-
     .card-bio {
         padding: 1rem 1rem 2rem 1rem;
     }
-    
     .image-wrapper {
         margin-top: 2em;
         width: 30rem;
         height: 6rem;
     }
-    
     .card-info h4 {
         font-size: 1.5rem;
     }
-    
     .card-info p {
         font-size: 0.8rem;
         letter-spacing: 0.05rem;
     }
-
     .card-btn {
         right: 4rem;
         font-size: 1rem;
     }
-
     .change .card-btn {
         width: 4rem;
         height: 4rem;
@@ -910,13 +747,10 @@ a {
         bottom: -2rem;
         border-radius: 50%;
     }
-
     .card-contact h5 {
         font-size: 1rem;
     }
-
     .card-out {
         padding: 0.5rem;
     }
-
 }
