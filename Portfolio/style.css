@@ -665,7 +665,7 @@ a {
 
     /* Home Page */
     .hi {
-        min-height: 170vh; 
+        min-height: 190vh; 
         background-color: #102044;
         width: 100%;
     }
@@ -711,7 +711,7 @@ a {
         height: 30px; 
     }
     .cardDescriptionBox > p {
-        font-size: 1.9vmin;
+        font-size: 2.4vmin;
     }
     .cardLinkWrapper > a {
         font-size: 1.5rem;
@@ -722,15 +722,9 @@ a {
 
     /* Experience Section */
     .experience {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20vh 20vw;
         width: 100vw;
         max-width: 100%;
-        height: 155vh;
-        background-color: #102044;
+        height: 150vh;
     }
     .experience h1 {
         font-size: 3rem; 
@@ -738,12 +732,6 @@ a {
     .expCard {
         width: 130%;
         height: 10rem;
-        background-color: white;
-        border: 2px solid #97ade6;
-        border-radius: 4px;
-        box-shadow: 3rem 3rem rgba(0,0,0,0.3);
-        outline: thick solid #97ade6;
-        float: left;
     }
     .expCard > img {
         height: 9.7rem;
@@ -751,10 +739,10 @@ a {
         margin-right: 10px;
     }
     .cardExperienceBox > p {
-        font-size: 0.6rem; 
+        font-size: 0.5rem; 
     }
     .cardExperienceBox > h2 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding-top: 10px;
     }
     .cardExperienceBox > h3 {
