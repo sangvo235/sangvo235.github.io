@@ -16,8 +16,8 @@ let projects = [
   tech6: "images/nothing.png",
   description: "Mobile app that digitalises the daily tasks of bus replacement ground staff by retrieving real-time data. \
   Built with React Native, Tailwind, Google Firebase/API and hosted on Expo.",
-  link: "https://github.com/JATTYz/TDP-TEAM4-2022",
-  github: "https://github.com/JATTYz/TDP-TEAM4-2022"
+  link: "https://github.com/sangvo235/Melbourne_Transit",
+  github: "https://github.com/sangvo235/Melbourne_Transit"
 },
 {
   name: "Interactive Quiz Platform",
@@ -174,7 +174,7 @@ let experience = [
   company: "Deloitte",
   role: "Digital & Technology Risk Intern",
   date: "Nov 2022 - Current",
-  description: "- Analysing Disaster Recovery & Business Continuity Plans to optimise client's risk resilence."
+  description: "- Scrum implementation, control testing and analysing cloud risk."
 },
 {
   expImage: "images/datacom_logo.png",
