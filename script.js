@@ -49,7 +49,7 @@ let projects = [
   github: "https://github.com/sangvo235/sangvo235.github.io"
 },
 {
-  name: "Java GUI Parking Spot System",
+  name: "Java GUI Parking Slot System",
   image: "images/parking_system.png",
   tech1: "images/nothing.png",
   tech2: "images/nothing.png", 
